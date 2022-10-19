@@ -38,6 +38,7 @@ const callback = mutations => {
             Array.from(list.children)
                 .map(node => {
                     node.children[1].addEventListener('click', (e) => {
+                        e.preventDefault();
                         node.children[1].parentElement.remove();
                     });
                 });
